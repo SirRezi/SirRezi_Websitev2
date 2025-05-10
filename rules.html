@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules - FiveM Roleplay Server</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .rules-container {
+            max-width: 1200px;
+            margin: 120px auto 2rem;
+            padding: 2rem;
+            background: #000000;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .rules-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            background: #000000;
+        }
+
+        .rules-header::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .rules-header h1 {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .rules-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rule-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .rule-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+        }
+
+        .rule-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .rule-section h2:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+
+        .rule-section h2 i.fa-chevron-down {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .rule-list, .penalty-list {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .rule-section.active {
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .rule-section.active h2 i.fa-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        .rule-list {
+            list-style: none;
+        }
+
+        .rule-list li {
+            margin-bottom: 1.2rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .rule-list li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+
+        .rule-category {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .rule-category i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .rule-category h3 {
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .penalty-system {
+            background: rgba(0, 0, 0, 0.7);
+            border-color: #ff4444;
+            backdrop-filter: blur(5px);
+        }
+
+        .penalty-system h2 {
+            color: #ff4444;
+        }
+
+        .penalty-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .penalty-item {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ff4444;
+        }
+
+        .penalty-item h4 {
+            color: #ff4444;
+            margin-bottom: 0.5rem;
+        }
+
+        .rules-section {
+            background: #000000;
+            position: relative;
+        }
+
+        .rules-card {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .rules-card:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>FiveM RP</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html" class="active">Rules</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="discord.html">Discord</a></li>
+        </ul>
+    </nav>
+
+    <main class="rules-container">
+        <div class="rules-header">
+            <h1>Server Rules</h1>
+            <p>To ensure a fair and enjoyable gaming experience for all, please adhere to the following rules.</p>
+        </div>
+
+        <div class="rule-section">
+            <h2><i class="fas fa-gavel"></i> General Rules</h2>
+            <div class="rule-category">
+                <i class="fas fa-users"></i>
+                <h3>Community Rules</h3>
+            </div>
+            <ul class="rule-list">
+                <li>Respectful interaction with all players is mandatory</li>
+                <li>No insults or discrimination</li>
+                <li>No advertising for other servers</li>
+                <li>No cheats or modifications</li>
+                <li>No metagaming or powergaming</li>
+            </ul>
+        </div>
+
+        <div class="rule-section">
+            <h2><i class="fas fa-car"></i> Vehicle Rules</h2>
+            <div class="rule-category">
+                <i class="fas fa-car-side"></i>
+                <h3>Vehicle Behavior</h3>
+            </div>
+            <ul class="rule-list">
+                <li>Realistic driving is mandatory</li>
+                <li>No vehicle spawns in the city</li>
+                <li>Vehicles must be insured</li>
+                <li>No vehicle modifications while driving</li>
+                <li>Speed limits must be observed</li>
+                <li>Vehicles must be properly parked</li>
+            </ul>
+        </div>
+
+        <div class="rule-section">
+            <h2><i class="fas fa-user-shield"></i> Roleplay Rules</h2>
+            <div class="rule-category">
+                <i class="fas fa-theater-masks"></i>
+                <h3>Roleplay Principles</h3>
+            </div>
+            <ul class="rule-list">
+                <li>Realistic roleplay is mandatory</li>
+                <li>No OOC communication in-game</li>
+                <li>Characters must be realistic</li>
+                <li>No random deathmatches</li>
+                <li>Roleplay situations must be played to the end</li>
+                <li>No teleportation without RP reason</li>
+            </ul>
+        </div>
+
+        <div class="rule-section penalty-system">
+            <h2><i class="fas fa-exclamation-triangle"></i> Penalty System</h2>
+            <div class="penalty-list">
+                <div class="penalty-item">
+                    <h4>First Violation</h4>
+                    <p>Warning and documentation</p>
+                </div>
+                <div class="penalty-item">
+                    <h4>Second Violation</h4>
+                    <p>Temporary ban (24h)</p>
+                </div>
+                <div class="penalty-item">
+                    <h4>Third Violation</h4>
+                    <p>Temporary ban (7 days)</p>
+                </div>
+                <div class="penalty-item">
+                    <h4>Serious Violations</h4>
+                    <p>Permanent ban</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>A unique FiveM roleplay server focused on realism and community.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/your-discord-invite" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FiveM Roleplay Server. All rights reserved. | <a href="imprint.html" style="color: var(--primary-color); text-decoration: none;">Imprint</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

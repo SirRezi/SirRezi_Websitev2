@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord - FiveM Roleplay Server</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .discord-container {
+            max-width: 1200px;
+            margin: 120px auto 2rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .discord-card {
+            background-color: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .discord-card h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .discord-card p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .discord-button {
+            background-color: #7289DA;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .discord-button:hover {
+            transform: scale(1.05);
+            background-color: #5b6eae;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            background-color: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>FiveM RP</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="discord.html" class="active">Discord</a></li>
+        </ul>
+    </nav>
+
+    <main class="discord-container">
+        <div class="discord-card">
+            <h2>Join our Discord!</h2>
+            <p>Connect with our community and stay informed about all server updates.</p>
+            <a href="https://discord.gg/your-discord-invite" target="_blank" class="discord-button">
+                <i class="fab fa-discord"></i> Join Discord
+            </a>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Server Announcements</h3>
+                <p>Stay informed about all important updates and events</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <h3>Active Community</h3>
+                <p>Connect with other players</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-headset"></i>
+                <h3>Support</h3>
+                <p>Help with questions and problems</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-gamepad"></i>
+                <h3>Events</h3>
+                <p>Participate in regular community events</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>A unique FiveM roleplay server focused on realism and community.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/your-discord-invite" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FiveM Roleplay Server. All rights reserved. | <a href="imprint.html" style="color: var(--primary-color); text-decoration: none;">Imprint</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

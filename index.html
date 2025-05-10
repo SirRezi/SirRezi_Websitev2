@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM Roleplay Server</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero {
+            background: #000000;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            margin-bottom: 3rem;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .features {
+            background: #000000;
+            position: relative;
+        }
+
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+        }
+
+        .server-info {
+            background: #000000;
+            position: relative;
+            padding: 4rem 2rem;
+        }
+
+        .server-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .server-status {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .status-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+        }
+
+        .status-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .status-item i.online {
+            color: #4CAF50;
+            animation: pulse 2s infinite;
+        }
+
+        .status-item span {
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .gallery {
+            background: #000000;
+            position: relative;
+        }
+
+        .gallery::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .feature-card {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>FiveM RP</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="discord.html">Discord</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to FiveM RP</h1>
+                <p>Experience the most realistic roleplay server</p>
+                <div class="cta-buttons">
+                    <a href="fivem://connect/your-server-ip" class="cta-button primary">Play Now</a>
+                </div>
+            </div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Active Players</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-car"></i>
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Vehicles</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Jobs</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="section-title">
+                <h2>Server Features</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Active Community</h3>
+                    <p>Join our growing community</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Realistic Vehicles</h3>
+                    <p>Extensive vehicle system</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Diverse Jobs</h3>
+                    <p>Multiple career paths</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Fair Play</h3>
+                    <p>Active administration</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Own Property</h3>
+                    <p>Buy and design your own home in the city</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Vehicle System</h3>
+                    <p>Realistic vehicle system with tuning and insurance</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="server-info">
+            <div class="section-title">
+                <h2>Server Status</h2>
+            </div>
+            <div class="server-status">
+                <div class="status-item">
+                    <i class="fas fa-circle online"></i>
+                    <span>Online</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-users"></i>
+                    <span>32/64 Players</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-clock"></i>
+                    <span>24/7 Available</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="section-title">
+                <h2>Server Gallery</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/8JZqXKJ.jpg" alt="City View">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/L5QZ3Yt.jpg" alt="Police Operation">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/Q2X3Y4Z.jpg" alt="Race Track">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/R7S8T9U.jpg" alt="Nightlife">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>A unique FiveM roleplay server focused on realism and community.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/your-discord-invite" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FiveM Roleplay Server. All rights reserved. | <a href="imprint.html" style="color: var(--primary-color); text-decoration: none;">Imprint</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

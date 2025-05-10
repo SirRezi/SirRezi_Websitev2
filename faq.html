@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - FiveM Roleplay Server</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faq-container {
+            max-width: 1200px;
+            margin: 120px auto 2rem;
+            padding: 2rem;
+            background: #000000;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            background: #000000;
+        }
+
+        .faq-header::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .faq-header h1 {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .faq-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin-bottom: 3rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .faq-category h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .faq-category h2 i {
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .faq-question {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            display: none;
+            padding-top: 1rem;
+            border-top: 1px solid var(--primary-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .faq-item.active {
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            background-color: rgba(255, 215, 0, 0.1);
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>FiveM RP</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="discord.html">Discord</a></li>
+        </ul>
+    </nav>
+
+    <main class="faq-container">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+
+        <div class="faq-category">
+            <h2><i class="fas fa-sign-in-alt"></i> Server Join</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I join the server?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    To join the server, you need FiveM and must register in our Discord server. Then follow the instructions in the #server-join channel. After registration, you will receive your access credentials via Discord message.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What are the requirements?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    You need a legal copy of GTA V, FiveM, and a microphone for voice chat communication. A Discord account is also required. Make sure your computer meets the minimum requirements.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2><i class="fas fa-coins"></i> Economy & Jobs</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How does the currency system work?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Our server uses a realistic currency system. Money can be earned through legal and illegal activities. All transactions are logged. You can deposit money in the bank and earn interest.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What jobs are available?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    We offer a variety of jobs including police officer, paramedic, mechanic, taxi driver, and many more. Each job has its own requirements and benefits. Check the #jobs channel on Discord for more information.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2><i class="fas fa-car"></i> Vehicles & Properties</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How can I buy a vehicle?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Vehicles can be purchased at car dealerships in the city. You need sufficient money and a valid driver's license. After purchase, you must insure and register the vehicle.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How does the property system work?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    You can buy or rent houses and apartments in the city. Each property can be furnished and used as storage. Prices vary by location and size.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h2><i class="fas fa-shield-alt"></i> Rules & Penalties</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What happens if I break the rules?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Rule violations are punished according to severity. From warnings to temporary or permanent bans. All penalties are documented in the #penalties channel. Contact the support team if you have questions.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How can I appeal a ban?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    If you believe a ban was issued unjustly, you can submit an appeal in the #ban-appeals channel. Please make sure to provide all relevant information.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>A unique FiveM roleplay server focused on realism and community.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/your-discord-invite" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FiveM Roleplay Server. All rights reserved. | <a href="imprint.html" style="color: var(--primary-color); text-decoration: none;">Imprint</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

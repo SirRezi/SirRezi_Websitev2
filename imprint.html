@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint - FiveM Roleplay Server</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .imprint-container {
+            max-width: 1200px;
+            margin: 120px auto 2rem;
+            padding: 2rem;
+            background: #000000;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .imprint-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .imprint-header::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .imprint-header h1 {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .imprint-section {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .imprint-section:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .imprint-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .imprint-section h2 i {
+            font-size: 1.8rem;
+        }
+
+        .imprint-section p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .legal-links {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .legal-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .legal-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>FiveM RP</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="discord.html">Discord</a></li>
+        </ul>
+    </nav>
+
+    <main class="imprint-container">
+        <div class="imprint-header">
+            <h1>Imprint</h1>
+        </div>
+
+        <div class="imprint-section">
+            <h2><i class="fas fa-building"></i> Information according to § 5 TMG</h2>
+            <p>FiveM Roleplay Server<br>
+            Example Street 123<br>
+            12345 Example City<br>
+            Germany</p>
+        </div>
+
+        <div class="imprint-section">
+            <h2><i class="fas fa-user-tie"></i> Responsible for content</h2>
+            <p>FiveM Roleplay Server<br>
+            Example Street 123<br>
+            12345 Example City<br>
+            Germany</p>
+        </div>
+
+        <div class="imprint-section">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+49 (0) 123 456789</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>kontakt@fivem-rp.de</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-discord"></i>
+                    <p>Discord: FiveM RP</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="imprint-section">
+            <h2><i class="fas fa-gavel"></i> Rechtliche Hinweise</h2>
+            <p>Alle Inhalte dieser Website sind urheberrechtlich geschützt. Die Verwendung, Vervielfältigung oder Verbreitung von Inhalten ist ohne vorherige schriftliche Zustimmung nicht gestattet.</p>
+            <p>Für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen wird keine Gewähr übernommen.</p>
+        </div>
+
+        <div class="imprint-section">
+            <h2><i class="fas fa-gavel"></i> EU Dispute Resolution</h2>
+            <p>The European Commission provides a platform for online dispute resolution (OS):<br>
+            <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a></p>
+        </div>
+
+        <div class="imprint-section">
+            <h2><i class="fas fa-gavel"></i> Consumer dispute resolution/Universal arbitration board</h2>
+            <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+        </div>
+
+        <div class="legal-links">
+            <a href="imprint.html">Imprint</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>A unique FiveM roleplay server focused on realism and community.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="discord.html">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/your-discord-invite" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FiveM Roleplay Server. All rights reserved. | <a href="imprint.html" style="color: var(--primary-color); text-decoration: none;">Imprint</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
